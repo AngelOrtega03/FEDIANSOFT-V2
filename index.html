@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <title>Pagina con Bootstrap</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="center">
+                <img src="logo.PNG" alt="fedian logo">
+            </div>               
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="p-3 border bg-light">
+                        <h2>Sobre nosotros</h2>
+                        <p class="justified">FEDIANSOFT es una compañia de desarrollo y publicacion de software, cuyo proposito
+                            es el de satisfacer las necesidades de nuestros clientes mas importantes: ustedes.
+                        </p>
+                        <p class="justified">Desde la creacion de videojuegos hasta el desarrollo de programas de computo mas 
+                            especializados y complejos, FEDIANSOFT tiene como principios la calidad y la seguridad
+                            en nuestros productos.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="p-3 border bg-light">
+                        <h2>Productos</h2>
+                        <h3>Juegos</h3>
+                        <div class="center">
+                            <a target="_blank" href="https://angelortega03.github.io/Juego/"><img class="bordering" src="games/game-1.PNG" alt="DONT STOP MOVING THE SQUARE!" width="201" height="149"></a>
+                            <figcaption @click="showinfo()">DON'T STOP MOVING THE SQUARE!</figcaption>
+                            <div id = "infogame1">
+                                <button @click="showinfo">Mas informacion</button>
+                                <p v-if="showit"><iframe src="games-info/txtg1.txt" frameborder=0 ></iframe></p>
+                                <p v-else></p>
+                            </div>
+                        </div>
+                        <h3>Aplicaciones</h3>
+                        <div class="center">
+                            <a target="_blank" href="https://caracola-magica-sim-f6e0fb16cdee.herokuapp.com"><img class="bordering" src="games/app-1.PNG" alt="Caracola Magica" width="201" height="149"></a>
+                            <figcaption>Caracola Magica</figcaption>
+                            <div id = "infoapp1">
+                                <button @click="showinfo">Mas informacion</button>
+                                <p v-if="showit"><iframe src="games-info/txta1.txt" frameborder=0 ></iframe></p>
+                                <p v-else></p>
+                            </div>
+                            <a target="_blank" href="https://msn-messenger-sim-36102bb46d78.herokuapp.com"><img class="bordering" src="games/app-2.PNG" alt="MSN Messenger Sim" width="201" height="149"></a>
+                            <figcaption>MSN Messenger Sim</figcaption>
+                            <div id = "infoapp2">
+                                <button @click="showinfo">Mas informacion</button>
+                                <p v-if="showit"><iframe src="games-info/txta2.txt" frameborder=0 ></iframe></p>
+                                <p v-else></p>
+                            </div>
+                            <a target="_blank" href="https://angelortega03.github.io/SoundBoard-page/"><img class="bordering" src="games/app-3.PNG" alt="SoundBoard" width="201" height="149"></a>
+                            <figcaption>SoundBoard</figcaption>
+                            <div id = "infoapp3">
+                                <button @click="showinfo">Mas informacion</button>
+                                <p v-if="showit"><iframe src="games-info/txta3.txt" frameborder=0 ></iframe></p>
+                                <p v-else></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="p-3 border bg-light">
+                        <h2>Contacto</h2>
+                        <p class="center">PROXIMAMENTE</p>
+                        <div class="center">
+                            <img src="contact/facebook.webp" alt="Facebook" width="128" height="128">
+                        </div>
+                        <div class="center">
+                            <img src="contact/x.png" alt="X/Twitter" width="128" height="128">
+                        </div>
+                        <div class="center">
+                            <img src="contact/instagram.png" alt="Instagram" width="128" height="128">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p class="center">© 2023 FEDIANSOFT</p>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script type="module">
+            import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+            createApp({
+                setup() {
+                    const showit = ref(false)
+
+                    function showinfo() {
+                        showit.value = !showit.value
+                    }
+
+                    return {
+                        showit,
+                        showinfo
+                    }
+                }
+            }).mount("#infogame1")
+
+            createApp({
+                setup() {
+                    const showit = ref(false)
+
+                    function showinfo() {
+                        showit.value = !showit.value
+                    }
+
+                    return {
+                        showit,
+                        showinfo
+                    }
+                }
+            }).mount("#infoapp1")
+
+            createApp({
+                setup() {
+                    const showit = ref(false)
+
+                    function showinfo() {
+                        showit.value = !showit.value
+                    }
+
+                    return {
+                        showit,
+                        showinfo
+                    }
+                }
+            }).mount("#infoapp2")
+
+            createApp({
+                setup() {
+                    const showit = ref(false)
+
+                    function showinfo() {
+                        showit.value = !showit.value
+                    }
+
+                    return {
+                        showit,
+                        showinfo
+                    }
+                }
+            }).mount("#infoapp3")
+
+        </script>
+    </body>
+    <!--<h1>{{ message }}</h1>
+    <p>Count is: {{ counter.count }}</p>-->
+</html>

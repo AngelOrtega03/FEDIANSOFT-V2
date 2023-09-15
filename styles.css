@@ -1,0 +1,38 @@
+h1, h2 {
+    text-align: center;
+}
+
+.justified {
+    text-align: justify;
+}
+
+.row {
+    text-align: center;
+}
+
+body {
+    background-image: url("background.avif");
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.bordering {
+    border: 5px solid whitesmoke;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+iframe {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    width: 400;
+    height: 400;
+}

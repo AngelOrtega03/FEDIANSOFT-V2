@@ -1,0 +1,4 @@
+¿Te gustan los desafios? Entonces este juego te va a encantar.
+Mueve el rectangulo mediante clicks, cada click hacer que el rectangulo vaya mas rapido y ganes 10 puntos.
+Ganas el juego una vez que llegas a los 1000 puntos.
+¿Te atreves a jugarlo?
