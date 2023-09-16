@@ -33,7 +33,7 @@
                             <a target="_blank" href="https://angelortega03.github.io/Juego/"><img class="bordering" src="games/game-1.PNG" alt="DONT STOP MOVING THE SQUARE!" width="201" height="149"></a>
                             <figcaption @click="showinfo()">DON'T STOP MOVING THE SQUARE!</figcaption>
                             <div id = "infogame1">
-                                <button @click="showinfo">Mas informacion</button>
+                                <button @click="showinfo">{{text}}</button>
                                 <p v-if="showit"><iframe src="games-info/txtg1.txt" frameborder=0 ></iframe></p>
                                 <p v-else></p>
                             </div>
@@ -43,21 +43,21 @@
                             <a target="_blank" href="https://caracola-magica-sim-f6e0fb16cdee.herokuapp.com"><img class="bordering" src="games/app-1.PNG" alt="Caracola Magica" width="201" height="149"></a>
                             <figcaption>Caracola Magica</figcaption>
                             <div id = "infoapp1">
-                                <button @click="showinfo">Mas informacion</button>
+                                <button @click="showinfo">{{text}}</button>
                                 <p v-if="showit"><iframe src="games-info/txta1.txt" frameborder=0 ></iframe></p>
                                 <p v-else></p>
                             </div>
                             <a target="_blank" href="https://msn-messenger-sim-36102bb46d78.herokuapp.com"><img class="bordering" src="games/app-2.PNG" alt="MSN Messenger Sim" width="201" height="149"></a>
                             <figcaption>MSN Messenger Sim</figcaption>
                             <div id = "infoapp2">
-                                <button @click="showinfo">Mas informacion</button>
+                                <button @click="showinfo">{{text}}</button>
                                 <p v-if="showit"><iframe src="games-info/txta2.txt" frameborder=0 ></iframe></p>
                                 <p v-else></p>
                             </div>
                             <a target="_blank" href="https://angelortega03.github.io/SoundBoard-page/"><img class="bordering" src="games/app-3.PNG" alt="SoundBoard" width="201" height="149"></a>
                             <figcaption>SoundBoard</figcaption>
                             <div id = "infoapp3">
-                                <button @click="showinfo">Mas informacion</button>
+                                <button @click="showinfo">{{text}}</button>
                                 <p v-if="showit"><iframe src="games-info/txta3.txt" frameborder=0 ></iframe></p>
                                 <p v-else></p>
                             </div>
@@ -91,13 +91,22 @@
             createApp({
                 setup() {
                     const showit = ref(false)
+                    var text = ref("Mas informacion")
 
                     function showinfo() {
                         showit.value = !showit.value
+                        if(text.value == "Mas informacion")
+                        {
+                            text.value = "Menos informacion"
+                        }
+                        else {
+                            text.value = "Mas informacion"
+                        }
                     }
 
                     return {
                         showit,
+                        text,
                         showinfo
                     }
                 }
@@ -106,13 +115,22 @@
             createApp({
                 setup() {
                     const showit = ref(false)
+                    var text = ref("Mas informacion")
 
                     function showinfo() {
                         showit.value = !showit.value
+                        if(text.value == "Mas informacion")
+                        {
+                            text.value = "Menos informacion"
+                        }
+                        else {
+                            text.value = "Mas informacion"
+                        }
                     }
 
                     return {
                         showit,
+                        text,
                         showinfo
                     }
                 }
@@ -121,13 +139,22 @@
             createApp({
                 setup() {
                     const showit = ref(false)
+                    var text = ref("Mas informacion")
 
                     function showinfo() {
                         showit.value = !showit.value
+                        if(text.value == "Mas informacion")
+                        {
+                            text.value = "Menos informacion"
+                        }
+                        else {
+                            text.value = "Mas informacion"
+                        }
                     }
 
                     return {
                         showit,
+                        text,
                         showinfo
                     }
                 }
@@ -136,13 +163,22 @@
             createApp({
                 setup() {
                     const showit = ref(false)
+                    var text = ref("Mas informacion")
 
                     function showinfo() {
                         showit.value = !showit.value
+                        if(text.value == "Mas informacion")
+                        {
+                            text.value = "Menos informacion"
+                        }
+                        else {
+                            text.value = "Mas informacion"
+                        }
                     }
 
                     return {
                         showit,
+                        text,
                         showinfo
                     }
                 }
